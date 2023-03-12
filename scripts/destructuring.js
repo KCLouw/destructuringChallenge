@@ -29,7 +29,7 @@ const toDoList = {
     tags4: ["Personal"]
 };
 
-function taskChoice(num) {
+/*function taskChoice(num) {
     if (num === 1) {
         const task1 = {};
         for (const [key, value] of Object.entries(toDoList)) {
@@ -64,4 +64,17 @@ function taskChoice(num) {
         console.log(task4);
     }
 };
+taskChoice(4);*/
+
+
+function taskChoice(num){
+    let task = {}
+    for(const [key, value] of Object.entries(toDoList)){
+        if(key.endsWith(num)){
+           task[key] = value;
+        };
+    };
+    console.log(task);
+};
+
 taskChoice(4);
